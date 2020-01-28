@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ethanbrooks/nodered-project-example/issues"
   },
-  "homepage": "https://github.com/ethanbrooks/nodered-project-example#readme"
+  "homepage": "https://github.com/ethanbrooks/nodered-project-example#readme",
+  "dependencies": {
+    "node-red-contrib-dockerode": "^0.4.3"
+  }
 }
