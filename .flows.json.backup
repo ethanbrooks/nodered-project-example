@@ -10,16 +10,16 @@
         "id": "579edabe.09fe34",
         "type": "docker-configuration",
         "z": "",
-        "host": "/var/run/docker.sock",
-        "port": ""
+        "host": "localhost",
+        "port": "2375"
     },
     {
         "id": "cdee0698.8e7b98",
         "type": "docker-events",
         "z": "4c3b05bf.206fbc",
-        "name": "Local unix sock file",
+        "name": "",
         "config": "579edabe.09fe34",
-        "x": 410,
+        "x": 370,
         "y": 120,
         "wires": [
             [
