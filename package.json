@@ -1,22 +1,28 @@
 {
-  "name": "nodered-project-example",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ethanbrooks/nodered-project-example.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ethanbrooks/nodered-project-example/issues"
-  },
-  "homepage": "https://github.com/ethanbrooks/nodered-project-example#readme",
-  "dependencies": {
-    "node-red-contrib-dockerode": "^0.4.3"
-  }
+    "name": "nodered-project-example",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ethanbrooks/nodered-project-example.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ethanbrooks/nodered-project-example/issues"
+    },
+    "homepage": "https://github.com/ethanbrooks/nodered-project-example#readme",
+    "dependencies": {
+        "node-red-contrib-dockerode": "^0.4.3"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
 }
