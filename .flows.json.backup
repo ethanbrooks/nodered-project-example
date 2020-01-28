@@ -10,16 +10,16 @@
         "id": "579edabe.09fe34",
         "type": "docker-configuration",
         "z": "",
-        "host": "localhost",
-        "port": "2375"
+        "host": "/var/run/docker.sock",
+        "port": ""
     },
     {
         "id": "cdee0698.8e7b98",
         "type": "docker-events",
         "z": "4c3b05bf.206fbc",
-        "name": "",
+        "name": "Local unix sock file",
         "config": "579edabe.09fe34",
-        "x": 370,
+        "x": 410,
         "y": 120,
         "wires": [
             [
@@ -162,6 +162,40 @@
         "wires": [
             [
                 "84dfb014.8caf"
+            ]
+        ]
+    },
+    {
+        "id": "990ecc82.cf7e",
+        "type": "docker-volumes",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "dcf691b9.d092f"
+            ]
+        ]
+    },
+    {
+        "id": "a3e442ec.4e673",
+        "type": "inject",
+        "z": "4c3b05bf.206fbc",
+        "name": "Trigger",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "990ecc82.cf7e"
             ]
         ]
     }
