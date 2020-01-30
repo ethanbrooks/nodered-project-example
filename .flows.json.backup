@@ -7,11 +7,39 @@
         "info": ""
     },
     {
+        "id": "85c99ec9.901a6",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "63ac7b9e.d2cf64",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8e9695ca.f74728",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "579edabe.09fe34",
         "type": "docker-configuration",
         "z": "",
         "host": "/var/run/docker.sock",
         "port": ""
+    },
+    {
+        "id": "8d7688bb.31a5d8",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "/ws/test",
+        "wholemsg": "false"
     },
     {
         "id": "cdee0698.8e7b98",
@@ -171,7 +199,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 440,
+        "x": 420,
         "y": 400,
         "wires": [
             [
@@ -198,5 +226,700 @@
                 "990ecc82.cf7e"
             ]
         ]
+    },
+    {
+        "id": "9eb44dc.d18d9b",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "/volumes",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 740,
+        "wires": [
+            [
+                "18db8d65.4ee653"
+            ]
+        ]
+    },
+    {
+        "id": "18db8d65.4ee653",
+        "type": "docker-volumes",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 740,
+        "wires": [
+            [
+                "aee4686.fa41398"
+            ]
+        ]
+    },
+    {
+        "id": "aee4686.fa41398",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c3d47d3e.beaf2",
+        "type": "devex-rules",
+        "z": "85c99ec9.901a6",
+        "name": "",
+        "container": "",
+        "action": "",
+        "filter": [
+            [
+                [
+                    "Category",
+                    "=",
+                    "Televisions"
+                ],
+                "and",
+                [
+                    "Price",
+                    "between",
+                    [
+                        2000,
+                        4000
+                    ]
+                ]
+            ]
+        ],
+        "fields": [
+            {
+                "dataField": "Name"
+            },
+            {
+                "dataField": "Price",
+                "dataType": "number",
+                "format": "currency"
+            },
+            {
+                "dataField": "Current_Inventory",
+                "dataType": "number",
+                "caption": "Inventory"
+            },
+            {
+                "dataField": "Category",
+                "filterOperations": [
+                    "="
+                ],
+                "lookup": {
+                    "dataSource": [
+                        "Video Players",
+                        "Televisions",
+                        "Monitors",
+                        "Projectors",
+                        "Automation"
+                    ]
+                }
+            }
+        ],
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "31e723f8.ebd54c"
+            ]
+        ]
+    },
+    {
+        "id": "f5fbee0a.4f0c7",
+        "type": "devex-facts",
+        "z": "85c99ec9.901a6",
+        "name": "",
+        "facts": [
+            {
+                "ID": 1,
+                "factPath": "mgs.bla",
+                "type": "string",
+                "name": "Bla",
+                "description": "This is Bla",
+                "exampleValue": 1
+            }
+        ],
+        "types": [
+            {
+                "id": "string",
+                "name": "String"
+            },
+            {
+                "id": "number",
+                "name": "Number"
+            },
+            {
+                "id": "date",
+                "name": "Date"
+            },
+            {
+                "id": "datetime",
+                "name": "DateTime"
+            },
+            {
+                "id": "boolean",
+                "name": "Boolean"
+            },
+            {
+                "id": "object",
+                "name": "Object"
+            }
+        ],
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "15878208.f36e1e"
+            ]
+        ]
+    },
+    {
+        "id": "96e25abf.caceb8",
+        "type": "inject",
+        "z": "85c99ec9.901a6",
+        "name": "",
+        "topic": "",
+        "payload": "{\"Category\":1,\"Price\":6,\"Name\":1,\"Current_Inventory\":1}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "f5fbee0a.4f0c7"
+            ]
+        ]
+    },
+    {
+        "id": "15878208.f36e1e",
+        "type": "debug",
+        "z": "85c99ec9.901a6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 470,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "31e723f8.ebd54c",
+        "type": "debug",
+        "z": "85c99ec9.901a6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 610,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c3021173.f4d57",
+        "type": "inject",
+        "z": "85c99ec9.901a6",
+        "name": "",
+        "topic": "",
+        "payload": "{\"Category\":1,\"Price\":6,\"Name\":1,\"Current_Inventory\":1}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "c3d47d3e.beaf2"
+            ]
+        ]
+    },
+    {
+        "id": "4c0d2553.b995ec",
+        "type": "apiko-image-cropper",
+        "z": "63ac7b9e.d2cf64",
+        "name": "apiko-image-cropper",
+        "cropX": "53.823529411764696",
+        "cropY": "37.85714285714286",
+        "cropWidth": "36.176470588235304",
+        "cropHeight": "30.47619047619047",
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "2c176d44.49ade2"
+            ]
+        ]
+    },
+    {
+        "id": "4f1211e1.2e6fb",
+        "type": "apiko-image-gallery",
+        "z": "63ac7b9e.d2cf64",
+        "name": "apiko-image-gallery",
+        "url": "https://picsum.photos/340/420?image=7",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "4c0d2553.b995ec"
+            ]
+        ]
+    },
+    {
+        "id": "d8096db6.54a7c",
+        "type": "inject",
+        "z": "63ac7b9e.d2cf64",
+        "name": "",
+        "topic": "",
+        "payload": "{\"url\":\"https://picsum.photos/340/420?image=6\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "4f1211e1.2e6fb",
+                "f74054c1.fd5c68"
+            ]
+        ]
+    },
+    {
+        "id": "2c176d44.49ade2",
+        "type": "debug",
+        "z": "63ac7b9e.d2cf64",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f74054c1.fd5c68",
+        "type": "debug",
+        "z": "63ac7b9e.d2cf64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 240,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "145833b3.256f7c",
+        "type": "complete",
+        "z": "63ac7b9e.d2cf64",
+        "name": "",
+        "scope": [
+            "4c0d2553.b995ec"
+        ],
+        "uncaught": false,
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "ebbb6bc7.a1dbb8"
+            ]
+        ]
+    },
+    {
+        "id": "ebbb6bc7.a1dbb8",
+        "type": "debug",
+        "z": "63ac7b9e.d2cf64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 430,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ce8dc619.48c248",
+        "type": "docker-events",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 280,
+        "y": 620,
+        "wires": [
+            [
+                "72c50769.2df588"
+            ]
+        ]
+    },
+    {
+        "id": "72c50769.2df588",
+        "type": "websocket out",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "server": "8d7688bb.31a5d8",
+        "client": "",
+        "x": 490,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "10d6edd3.91f0e2",
+        "type": "docker-containers",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 410,
+        "y": 700,
+        "wires": [
+            [
+                "98806ac6.5643b8"
+            ]
+        ]
+    },
+    {
+        "id": "24815ebc.3be8f2",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "/containers",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 700,
+        "wires": [
+            [
+                "10d6edd3.91f0e2"
+            ]
+        ]
+    },
+    {
+        "id": "98806ac6.5643b8",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "e96bf741.78b718",
+        "type": "docker-networks",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 780,
+        "wires": [
+            [
+                "b9d7bc7a.430ab"
+            ]
+        ]
+    },
+    {
+        "id": "d809f4f4.6fda98",
+        "type": "docker-secrets",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 820,
+        "wires": [
+            [
+                "46f48580.0f028c"
+            ]
+        ]
+    },
+    {
+        "id": "2aeb3893.ecf8a8",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "networks",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 780,
+        "wires": [
+            [
+                "e96bf741.78b718"
+            ]
+        ]
+    },
+    {
+        "id": "5fcf3e18.be76c",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "secrets",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 820,
+        "wires": [
+            [
+                "d809f4f4.6fda98"
+            ]
+        ]
+    },
+    {
+        "id": "f4e8e96e.ef8db8",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "plugins",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 860,
+        "wires": [
+            [
+                "d0bc1da4.b5ba"
+            ]
+        ]
+    },
+    {
+        "id": "d0bc1da4.b5ba",
+        "type": "docker-plugins",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 860,
+        "wires": [
+            [
+                "4126d7f0.288b88"
+            ]
+        ]
+    },
+    {
+        "id": "bd1b4106.13099",
+        "type": "docker-nodes",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 390,
+        "y": 900,
+        "wires": [
+            [
+                "e0e4a660.600dc8"
+            ]
+        ]
+    },
+    {
+        "id": "fbefb086.9f79c",
+        "type": "docker-tasks",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 390,
+        "y": 940,
+        "wires": [
+            [
+                "54d58df9.92cb34"
+            ]
+        ]
+    },
+    {
+        "id": "1b104564.7fae7b",
+        "type": "docker-services",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 980,
+        "wires": [
+            [
+                "ce1403.29a81c"
+            ]
+        ]
+    },
+    {
+        "id": "f6c88740.3a4ad8",
+        "type": "docker-images",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 1020,
+        "wires": [
+            [
+                "55602c80.2195f4"
+            ]
+        ]
+    },
+    {
+        "id": "7dec14a7.2fbe3c",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "nodes",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 900,
+        "wires": [
+            [
+                "bd1b4106.13099"
+            ]
+        ]
+    },
+    {
+        "id": "439fa36e.2be7cc",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "tasks",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 940,
+        "wires": [
+            [
+                "fbefb086.9f79c"
+            ]
+        ]
+    },
+    {
+        "id": "da0e33c5.dfdcb",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "services",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 980,
+        "wires": [
+            [
+                "1b104564.7fae7b"
+            ]
+        ]
+    },
+    {
+        "id": "9f178ba5.87cab8",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "images",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 1020,
+        "wires": [
+            [
+                "f6c88740.3a4ad8"
+            ]
+        ]
+    },
+    {
+        "id": "b9d7bc7a.430ab",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "46f48580.0f028c",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "4126d7f0.288b88",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "e0e4a660.600dc8",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "54d58df9.92cb34",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "ce1403.29a81c",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "55602c80.2195f4",
+        "type": "http response",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 1020,
+        "wires": []
     }
 ]
