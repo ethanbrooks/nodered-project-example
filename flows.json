@@ -2,7 +2,14 @@
     {
         "id": "4c3b05bf.206fbc",
         "type": "tab",
-        "label": "Docker",
+        "label": "Docker Info",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a3588b61.859a18",
+        "type": "tab",
+        "label": "Docker Inspect",
         "disabled": false,
         "info": ""
     },
@@ -68,8 +75,8 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 280,
-        "y": 40,
+        "x": 110,
+        "y": 60,
         "wires": [
             [
                 "72c50769.2df588"
@@ -83,8 +90,8 @@
         "name": "",
         "server": "8d7688bb.31a5d8",
         "client": "",
-        "x": 490,
-        "y": 40,
+        "x": 530,
+        "y": 60,
         "wires": []
     },
     {
@@ -421,6 +428,672 @@
         "headers": {},
         "x": 580,
         "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d9f83952.18f688",
+        "type": "docker-container-attach",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "container": "nodered_nodered_1",
+        "attach": "exec",
+        "cmd": "ls -la",
+        "x": 280,
+        "y": 520,
+        "wires": [
+            [
+                "73edf816.b12498"
+            ]
+        ]
+    },
+    {
+        "id": "73edf816.b12498",
+        "type": "debug",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 460,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "cc89d4d.de70d28",
+        "type": "inject",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 520,
+        "wires": [
+            [
+                "d9f83952.18f688"
+            ]
+        ]
+    },
+    {
+        "id": "e0781fe.b97dae",
+        "type": "docker-container-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "container": "",
+        "action": "inspect",
+        "cmd": "",
+        "x": 710,
+        "y": 60,
+        "wires": [
+            [
+                "194c5206.89e86e"
+            ]
+        ]
+    },
+    {
+        "id": "1e481dc1.f60122",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.container",
+                "pt": "msg",
+                "to": "container",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 60,
+        "wires": [
+            [
+                "e0781fe.b97dae"
+            ]
+        ]
+    },
+    {
+        "id": "7fb8e8e4.d42c98",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/container",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "1e481dc1.f60122"
+            ]
+        ]
+    },
+    {
+        "id": "194c5206.89e86e",
+        "type": "http response",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bab2b9db.ba86a8",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.image",
+                "pt": "msg",
+                "to": "image",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "3874a669.ee2a6a"
+            ]
+        ]
+    },
+    {
+        "id": "b0a300a.4654",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/image",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "bab2b9db.ba86a8"
+            ]
+        ]
+    },
+    {
+        "id": "fbc62d2b.19d76",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.service",
+                "pt": "msg",
+                "to": "service",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 120,
+        "wires": [
+            [
+                "b124a312.c1cd6"
+            ]
+        ]
+    },
+    {
+        "id": "f35cb91f.b8d6a8",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/service",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "fbc62d2b.19d76"
+            ]
+        ]
+    },
+    {
+        "id": "be1b1261.500ce",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.task",
+                "pt": "msg",
+                "to": "task",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "1ce91cc1.b48253"
+            ]
+        ]
+    },
+    {
+        "id": "be8c2d94.ca50c",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/task",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "be1b1261.500ce"
+            ]
+        ]
+    },
+    {
+        "id": "e65123cd.a5e79",
+        "type": "http response",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "bfe8b842.0a4088",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.node",
+                "pt": "msg",
+                "to": "node",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "24af840d.af4efc"
+            ]
+        ]
+    },
+    {
+        "id": "cb366846.141d38",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/node",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "bfe8b842.0a4088"
+            ]
+        ]
+    },
+    {
+        "id": "50618c4a.2e6a94",
+        "type": "http response",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ef020978.9597a8",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.secret",
+                "pt": "msg",
+                "to": "secret",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "1237136d.0c6ecd"
+            ]
+        ]
+    },
+    {
+        "id": "d5b43380.4bfbb",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/secret",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "ef020978.9597a8"
+            ]
+        ]
+    },
+    {
+        "id": "f462fe2.e321c",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.network",
+                "pt": "msg",
+                "to": "network",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 240,
+        "wires": [
+            [
+                "aad1e95f.7c4378"
+            ]
+        ]
+    },
+    {
+        "id": "ae518bf4.5e4a68",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/network",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "f462fe2.e321c"
+            ]
+        ]
+    },
+    {
+        "id": "3874a669.ee2a6a",
+        "type": "docker-image-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "image": "",
+        "action": "inspect",
+        "x": 690,
+        "y": 480,
+        "wires": [
+            []
+        ],
+        "info": "This is using the hash\nhttp://localhost:1880/red-nodes/image/?image=sha256:8c98e6ed72f87598d4566621f6f0293dbbf834822a41b75e110247936be31876"
+    },
+    {
+        "id": "b124a312.c1cd6",
+        "type": "docker-service-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "service": "",
+        "action": "inspect",
+        "x": 700,
+        "y": 120,
+        "wires": [
+            [
+                "194c5206.89e86e"
+            ]
+        ],
+        "info": "http://localhost:1880/red-nodes/service/?service=docker-Nodered_nodered"
+    },
+    {
+        "id": "1ce91cc1.b48253",
+        "type": "docker-task-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "task": "",
+        "action": "inspect",
+        "x": 690,
+        "y": 540,
+        "wires": [
+            [
+                "e65123cd.a5e79"
+            ]
+        ],
+        "info": "http://localhost:1880/red-nodes/task/?task=s4muohfijyop4nkbcgzesvwza"
+    },
+    {
+        "id": "24af840d.af4efc",
+        "type": "docker-node-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "node": "docker-desktop",
+        "action": "",
+        "x": 690,
+        "y": 620,
+        "wires": [
+            []
+        ],
+        "info": "Missing inspect"
+    },
+    {
+        "id": "1237136d.0c6ecd",
+        "type": "docker-secret-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "secret": "",
+        "action": "inspect",
+        "x": 700,
+        "y": 180,
+        "wires": [
+            [
+                "194c5206.89e86e"
+            ]
+        ],
+        "info": "http://localhost:1880/red-nodes/secret/?secret=my_secret_data"
+    },
+    {
+        "id": "aad1e95f.7c4378",
+        "type": "docker-network-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "network": "",
+        "action": "inspect",
+        "x": 700,
+        "y": 240,
+        "wires": [
+            [
+                "194c5206.89e86e"
+            ]
+        ],
+        "info": "http://localhost:1880/red-nodes/network/?network=func_functions"
+    },
+    {
+        "id": "342c3ae7.7e0a46",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.volume",
+                "pt": "msg",
+                "to": "volume",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "fd9e6589.b2a9c8"
+            ]
+        ]
+    },
+    {
+        "id": "96531193.59ce3",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/volume",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "342c3ae7.7e0a46"
+            ]
+        ]
+    },
+    {
+        "id": "935dcd27.c1257",
+        "type": "change",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.plugin",
+                "pt": "msg",
+                "to": "plugin",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 700,
+        "wires": [
+            [
+                "7fddaf24.79191"
+            ]
+        ]
+    },
+    {
+        "id": "74982647.b35e78",
+        "type": "http in",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "url": "/plugin",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "935dcd27.c1257"
+            ]
+        ]
+    },
+    {
+        "id": "47484141.d46b7",
+        "type": "http response",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "fd9e6589.b2a9c8",
+        "type": "docker-volume-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "volume": "nodered_nodered_data1",
+        "action": "inspect",
+        "x": 700,
+        "y": 300,
+        "wires": [
+            [
+                "194c5206.89e86e"
+            ]
+        ]
+    },
+    {
+        "id": "7fddaf24.79191",
+        "type": "docker-plugin-actions",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "plugin": "docker.io/vieux/sshfs:latest",
+        "action": "inspect",
+        "x": 690,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da059135.7d1c",
+        "type": "comment",
+        "z": "a3588b61.859a18",
+        "name": "reference issuses",
+        "info": "reference issuses",
+        "x": 100,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6d14ccf1.6b3814",
+        "type": "comment",
+        "z": "a3588b61.859a18",
+        "name": "No inspect",
+        "info": "No inspect",
+        "x": 80,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6b65685c.398178",
+        "type": "comment",
+        "z": "a3588b61.859a18",
+        "name": "Can't find 404",
+        "info": "Can't find 404 inspect",
+        "x": 90,
+        "y": 660,
         "wires": []
     }
 ]
