@@ -14,6 +14,20 @@
         "info": ""
     },
     {
+        "id": "41f777e2.d72c88",
+        "type": "tab",
+        "label": "Docker Action",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a3235da7.9d754",
+        "type": "tab",
+        "label": "Docker Inspect WS",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "579edabe.09fe34",
         "type": "docker-configuration",
         "z": "",
@@ -25,6 +39,13 @@
         "type": "websocket-listener",
         "z": "",
         "path": "/ws/test",
+        "wholemsg": "false"
+    },
+    {
+        "id": "5bd79fa5.d89eb",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "ws/container",
         "wholemsg": "false"
     },
     {
@@ -429,57 +450,6 @@
         "x": 580,
         "y": 440,
         "wires": []
-    },
-    {
-        "id": "d9f83952.18f688",
-        "type": "docker-container-attach",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "config": "579edabe.09fe34",
-        "container": "nodered_nodered_1",
-        "attach": "exec",
-        "cmd": "ls -la",
-        "x": 280,
-        "y": 520,
-        "wires": [
-            [
-                "73edf816.b12498"
-            ]
-        ]
-    },
-    {
-        "id": "73edf816.b12498",
-        "type": "debug",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 460,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "cc89d4d.de70d28",
-        "type": "inject",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 100,
-        "y": 520,
-        "wires": [
-            [
-                "d9f83952.18f688"
-            ]
-        ]
     },
     {
         "id": "e0781fe.b97dae",
@@ -1095,5 +1065,80 @@
         "x": 90,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "a1739c6b.afdff",
+        "type": "inject",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "topic": "",
+        "payload": "{\"container\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "a4016e8.190ab9"
+            ]
+        ]
+    },
+    {
+        "id": "267cd34f.c55e1c",
+        "type": "websocket out",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "server": "5bd79fa5.d89eb",
+        "client": "",
+        "x": 840,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b0b1e01e.61a7f",
+        "type": "docker-container-actions",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "container": "",
+        "action": "inspect",
+        "cmd": "",
+        "x": 590,
+        "y": 40,
+        "wires": [
+            [
+                "267cd34f.c55e1c"
+            ]
+        ]
+    },
+    {
+        "id": "a4016e8.190ab9",
+        "type": "change",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.container",
+                "pt": "msg",
+                "to": "container",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 40,
+        "wires": [
+            [
+                "b0b1e01e.61a7f"
+            ]
+        ]
     }
 ]
