@@ -75,20 +75,9 @@
         "y": 160,
         "wires": [
             [
-                "aee4686.fa41398"
+                "98806ac6.5643b8"
             ]
         ]
-    },
-    {
-        "id": "aee4686.fa41398",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "ce8dc619.48c248",
@@ -167,7 +156,7 @@
         "y": 200,
         "wires": [
             [
-                "b9d7bc7a.430ab"
+                "98806ac6.5643b8"
             ]
         ]
     },
@@ -181,7 +170,7 @@
         "y": 240,
         "wires": [
             [
-                "46f48580.0f028c"
+                "98806ac6.5643b8"
             ]
         ]
     },
@@ -246,7 +235,7 @@
         "y": 280,
         "wires": [
             [
-                "4126d7f0.288b88"
+                "98806ac6.5643b8"
             ]
         ]
     },
@@ -260,7 +249,7 @@
         "y": 320,
         "wires": [
             [
-                "e0e4a660.600dc8"
+                "98806ac6.5643b8"
             ]
         ]
     },
@@ -274,35 +263,7 @@
         "y": 360,
         "wires": [
             [
-                "54d58df9.92cb34"
-            ]
-        ]
-    },
-    {
-        "id": "1b104564.7fae7b",
-        "type": "docker-services",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "config": "579edabe.09fe34",
-        "x": 400,
-        "y": 400,
-        "wires": [
-            [
-                "ce1403.29a81c"
-            ]
-        ]
-    },
-    {
-        "id": "f6c88740.3a4ad8",
-        "type": "docker-images",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "config": "579edabe.09fe34",
-        "x": 400,
-        "y": 440,
-        "wires": [
-            [
-                "55602c80.2195f4"
+                "98806ac6.5643b8"
             ]
         ]
     },
@@ -369,87 +330,8 @@
         "x": 160,
         "y": 440,
         "wires": [
-            [
-                "f6c88740.3a4ad8"
-            ]
+            []
         ]
-    },
-    {
-        "id": "b9d7bc7a.430ab",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "46f48580.0f028c",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "4126d7f0.288b88",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "e0e4a660.600dc8",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "54d58df9.92cb34",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "ce1403.29a81c",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "55602c80.2195f4",
-        "type": "http response",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 580,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "e0781fe.b97dae",
@@ -1138,6 +1020,86 @@
         "wires": [
             [
                 "b0b1e01e.61a7f"
+            ]
+        ]
+    },
+    {
+        "id": "33df6cb9.4ad004",
+        "type": "docker-configs",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 500,
+        "wires": [
+            [
+                "98806ac6.5643b8",
+                "cbfffd41.1b19d"
+            ]
+        ]
+    },
+    {
+        "id": "ed122ed.5256cd",
+        "type": "http in",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "url": "configs",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "33df6cb9.4ad004"
+            ]
+        ]
+    },
+    {
+        "id": "620b2d0c.3e0874",
+        "type": "inject",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "33df6cb9.4ad004"
+            ]
+        ]
+    },
+    {
+        "id": "cbfffd41.1b19d",
+        "type": "debug",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 490,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "1b104564.7fae7b",
+        "type": "docker-services",
+        "z": "4c3b05bf.206fbc",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "98806ac6.5643b8"
             ]
         ]
     }
