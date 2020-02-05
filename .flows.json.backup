@@ -78,7 +78,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
+        "x": 290,
         "y": 180,
         "wires": [
             [
@@ -92,7 +92,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 110,
+        "x": 230,
         "y": 60,
         "wires": [
             [
@@ -107,7 +107,7 @@
         "name": "",
         "server": "8d7688bb.31a5d8",
         "client": "",
-        "x": 730,
+        "x": 850,
         "y": 60,
         "wires": []
     },
@@ -120,7 +120,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 180,
+        "x": 300,
         "y": 120,
         "wires": [
             [
@@ -135,7 +135,7 @@
         "name": "",
         "statusCode": "200",
         "headers": {},
-        "x": 680,
+        "x": 800,
         "y": 120,
         "wires": []
     },
@@ -148,7 +148,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
+        "x": 290,
         "y": 240,
         "wires": [
             [
@@ -165,7 +165,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
+        "x": 290,
         "y": 300,
         "wires": [
             [
@@ -182,7 +182,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 160,
+        "x": 280,
         "y": 360,
         "wires": [
             [
@@ -199,7 +199,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 160,
+        "x": 280,
         "y": 420,
         "wires": [
             [
@@ -216,7 +216,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 160,
+        "x": 280,
         "y": 480,
         "wires": [
             [
@@ -233,7 +233,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
+        "x": 290,
         "y": 540,
         "wires": [
             [
@@ -250,7 +250,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 160,
+        "x": 280,
         "y": 600,
         "wires": [
             [
@@ -668,7 +668,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
+        "x": 290,
         "y": 660,
         "wires": [
             [
@@ -844,6 +844,13 @@
                 "t": "set",
                 "p": "containerId",
                 "pt": "msg",
+                "to": "payload.containerId",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "containerId",
+                "pt": "msg",
                 "to": "req.params.containerId",
                 "tot": "msg"
             }
@@ -853,7 +860,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
+        "x": 600,
         "y": 80,
         "wires": [
             [
@@ -871,8 +878,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1210,
-        "y": 220,
+        "x": 1130,
+        "y": 140,
         "wires": []
     },
     {
@@ -1126,7 +1133,7 @@
         "config": "579edabe.09fe34",
         "container": "",
         "action": "list",
-        "x": 410,
+        "x": 530,
         "y": 120,
         "wires": [
             [
@@ -1140,7 +1147,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 400,
+        "x": 520,
         "y": 660,
         "wires": [
             [
@@ -1156,7 +1163,7 @@
         "config": "579edabe.09fe34",
         "image": "",
         "action": "",
-        "x": 390,
+        "x": 510,
         "y": 600,
         "wires": [
             [
@@ -1172,7 +1179,7 @@
         "config": "579edabe.09fe34",
         "service": "",
         "action": "",
-        "x": 400,
+        "x": 520,
         "y": 540,
         "wires": [
             [
@@ -1188,7 +1195,7 @@
         "config": "579edabe.09fe34",
         "task": "",
         "action": "",
-        "x": 390,
+        "x": 510,
         "y": 480,
         "wires": [
             [
@@ -1204,7 +1211,7 @@
         "config": "579edabe.09fe34",
         "node": "",
         "action": "",
-        "x": 390,
+        "x": 510,
         "y": 420,
         "wires": [
             [
@@ -1220,7 +1227,7 @@
         "config": "579edabe.09fe34",
         "secret": "",
         "action": "",
-        "x": 400,
+        "x": 520,
         "y": 300,
         "wires": [
             [
@@ -1236,7 +1243,7 @@
         "config": "579edabe.09fe34",
         "plugin": "",
         "action": "",
-        "x": 390,
+        "x": 510,
         "y": 360,
         "wires": [
             [
@@ -1252,7 +1259,7 @@
         "config": "579edabe.09fe34",
         "network": "",
         "action": "",
-        "x": 400,
+        "x": 520,
         "y": 240,
         "wires": [
             [
@@ -1268,7 +1275,7 @@
         "config": "579edabe.09fe34",
         "volume": "",
         "action": "",
-        "x": 400,
+        "x": 520,
         "y": 180,
         "wires": [
             [
@@ -1822,7 +1829,8 @@
         "y": 60,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1836,7 +1844,8 @@
         "y": 120,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1852,7 +1861,8 @@
         "y": 500,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1868,7 +1878,8 @@
         "y": 420,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1884,7 +1895,8 @@
         "y": 360,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1900,7 +1912,8 @@
         "y": 680,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1916,7 +1929,8 @@
         "y": 240,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1932,7 +1946,8 @@
         "y": 300,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1948,7 +1963,8 @@
         "y": 180,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -1964,7 +1980,8 @@
         "y": 560,
         "wires": [
             [
-                "fa731e7b.43fad"
+                "fa731e7b.43fad",
+                "879860bc.d8e99"
             ]
         ]
     },
@@ -2331,7 +2348,7 @@
                 "t": "set",
                 "p": "containerId",
                 "pt": "msg",
-                "to": "req.params.containerId",
+                "to": "payload.containerId",
                 "tot": "msg"
             }
         ],
@@ -2344,7 +2361,8 @@
         "y": 60,
         "wires": [
             [
-                "90faadf6.c7c29"
+                "90faadf6.c7c29",
+                "4d609661.f81cd8"
             ]
         ]
     },
@@ -2653,7 +2671,8 @@
         "y": 680,
         "wires": [
             [
-                "194c5206.89e86e"
+                "194c5206.89e86e",
+                "82c20ce3.75d56"
             ]
         ]
     },
@@ -2702,7 +2721,9 @@
         "x": 880,
         "y": 620,
         "wires": [
-            []
+            [
+                "879860bc.d8e99"
+            ]
         ]
     },
     {
@@ -2719,6 +2740,275 @@
         "wires": [
             [
                 "ed1c4f77.382cd"
+            ]
+        ]
+    },
+    {
+        "id": "879860bc.d8e99",
+        "type": "debug",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1210,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ef42a38b.66ab1",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 20,
+        "wires": [
+            [
+                "730e7d9a.66b034"
+            ]
+        ]
+    },
+    {
+        "id": "4d609661.f81cd8",
+        "type": "debug",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1160,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8364ae47.afad4",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "51ae3860.2ed588"
+            ]
+        ]
+    },
+    {
+        "id": "f6e428f8.c4cc48",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "e5b18c96.f9325"
+            ]
+        ]
+    },
+    {
+        "id": "97994b75.348388",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "3d42a7ec.99fd38"
+            ]
+        ]
+    },
+    {
+        "id": "8694f377.3ee72",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "4323fbe2.bb79d4"
+            ]
+        ]
+    },
+    {
+        "id": "6df99cc4.2258a4",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "f112e6c4.021818"
+            ]
+        ]
+    },
+    {
+        "id": "d7efd9a7.b30188",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "b83c04a6.2fc688"
+            ]
+        ]
+    },
+    {
+        "id": "e713f828.d5ad88",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "b30a7cb0.085ab"
+            ]
+        ]
+    },
+    {
+        "id": "9554f0a7.1b59f",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 480,
+        "wires": [
+            [
+                "54b33ee6.590af"
+            ]
+        ]
+    },
+    {
+        "id": "8e486e8c.c6659",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 540,
+        "wires": [
+            [
+                "899857a2.2b2d68"
+            ]
+        ]
+    },
+    {
+        "id": "bdd3717a.cacb3",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 600,
+        "wires": [
+            [
+                "61d7d303.b2112c"
+            ]
+        ]
+    },
+    {
+        "id": "84471b16.e618a8",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 660,
+        "wires": [
+            [
+                "cba4e685.ac42c8"
             ]
         ]
     }
