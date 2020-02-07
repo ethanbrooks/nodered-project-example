@@ -248,6 +248,7 @@
         "config": "579edabe.09fe34",
         "container": "",
         "action": "inspect",
+        "options": "",
         "x": 850,
         "y": 80,
         "wires": [
@@ -623,7 +624,6 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "",
         "action": "init",
         "x": 760,
         "y": 180,
@@ -2473,7 +2473,6 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "",
         "action": "inspect",
         "x": 840,
         "y": 620,
@@ -2540,7 +2539,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "",
         "action": "update",
         "x": 880,
         "y": 620,
@@ -3749,7 +3747,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "template": "{}",
         "output": "json",
         "x": 240,
         "y": 60,
@@ -4535,6 +4533,157 @@
         "wires": [
             [
                 "7fb27187.8d311"
+            ]
+        ]
+    },
+    {
+        "id": "61dd8dff.f687e4",
+        "type": "docker-volume-actions",
+        "z": "caac33cb.80222",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "action": "create",
+        "x": 460,
+        "y": 120,
+        "wires": [
+            [
+                "ba80a9a.3eac658"
+            ]
+        ]
+    },
+    {
+        "id": "a1cb9556.3a61d8",
+        "type": "inject",
+        "z": "caac33cb.80222",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Driver\":\"local\",\"Labels\":{\"com.docker.compose.project\":\"bl\",\"com.docker.compose.version\":\"1.24.1\",\"com.docker.compose.volume\":\"mongodbs\"},\"Mountpoint\":\"/tmp\",\"Name\":\"docker_tmpsdafas1\",\"Options\":null,\"Scope\":\"local\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "61dd8dff.f687e4"
+            ]
+        ]
+    },
+    {
+        "id": "ba80a9a.3eac658",
+        "type": "debug",
+        "z": "caac33cb.80222",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 690,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1a6e22f.59fd4dd",
+        "type": "docker-volume-actions",
+        "z": "caac33cb.80222",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "action": "prune",
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "b6355428.a11928"
+            ]
+        ]
+    },
+    {
+        "id": "a3b84067.e5954",
+        "type": "inject",
+        "z": "caac33cb.80222",
+        "name": "",
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "1a6e22f.59fd4dd"
+            ]
+        ]
+    },
+    {
+        "id": "b6355428.a11928",
+        "type": "debug",
+        "z": "caac33cb.80222",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2c1d5d35.7a29b2",
+        "type": "inject",
+        "z": "caac33cb.80222",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "31d70d1c.6733d2"
+            ]
+        ]
+    },
+    {
+        "id": "fbddbc4a.ac268",
+        "type": "debug",
+        "z": "caac33cb.80222",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "31d70d1c.6733d2",
+        "type": "docker-container-actions",
+        "z": "caac33cb.80222",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "container": "nodered_nodered_1",
+        "action": "exec",
+        "options": "ls -la",
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "fbddbc4a.ac268"
             ]
         ]
     }
