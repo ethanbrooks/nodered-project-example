@@ -42,6 +42,13 @@
         "info": ""
     },
     {
+        "id": "caac33cb.80222",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "bcf00345.14dd2",
         "type": "tab",
         "label": "Flow 1",
@@ -85,31 +92,6 @@
                 "a93f6b05.ea5278"
             ]
         ]
-    },
-    {
-        "id": "ce8dc619.48c248",
-        "type": "docker-events",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "config": "579edabe.09fe34",
-        "x": 230,
-        "y": 60,
-        "wires": [
-            [
-                "72c50769.2df588"
-            ]
-        ]
-    },
-    {
-        "id": "72c50769.2df588",
-        "type": "websocket out",
-        "z": "4c3b05bf.206fbc",
-        "name": "",
-        "server": "8d7688bb.31a5d8",
-        "client": "",
-        "x": 850,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "24815ebc.3be8f2",
@@ -355,27 +337,16 @@
         ]
     },
     {
-        "id": "e65123cd.a5e79",
-        "type": "http response",
-        "z": "a3588b61.859a18",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 890,
-        "y": 840,
-        "wires": []
-    },
-    {
         "id": "cb366846.141d38",
         "type": "http in",
         "z": "a3588b61.859a18",
         "name": "",
-        "url": "/node",
+        "url": "/node/:nodeId",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 120,
-        "y": 840,
+        "x": 280,
+        "y": 560,
         "wires": [
             [
                 "c75a07ba.e832b8"
@@ -422,7 +393,6 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "image": "sha256:8c98e6ed72f87598d4566621f6f0293dbbf834822a41b75e110247936be31876",
         "action": "inspect",
         "x": 830,
         "y": 440,
@@ -440,7 +410,6 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "docker-Traefik_whoami",
         "action": "inspect",
         "x": 840,
         "y": 200,
@@ -458,7 +427,6 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "task": "",
         "action": "inspect",
         "x": 830,
         "y": 500,
@@ -476,13 +444,13 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "node": "docker-desktop",
-        "action": "",
-        "x": 690,
-        "y": 840,
+        "action": "inspect",
+        "x": 830,
+        "y": 560,
         "wires": [
             [
-                "e65123cd.a5e79"
+                "82c20ce3.75d56",
+                "194c5206.89e86e"
             ]
         ],
         "info": "Missing inspect"
@@ -493,7 +461,6 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "secret": "",
         "action": "inspect",
         "x": 840,
         "y": 260,
@@ -511,7 +478,6 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "network": "",
         "action": "inspect",
         "x": 840,
         "y": 320,
@@ -541,29 +507,11 @@
         ]
     },
     {
-        "id": "74982647.b35e78",
-        "type": "http in",
-        "z": "a3588b61.859a18",
-        "name": "",
-        "url": "/plugin",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 920,
-        "wires": [
-            [
-                "f8b5889d.c7a208"
-            ]
-        ]
-    },
-    {
         "id": "fd9e6589.b2a9c8",
         "type": "docker-volume-actions",
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "volume": "nodered_nodered_data1",
         "action": "inspect",
         "x": 840,
         "y": 380,
@@ -575,39 +523,13 @@
         ]
     },
     {
-        "id": "7fddaf24.79191",
-        "type": "docker-plugin-actions",
-        "z": "a3588b61.859a18",
-        "name": "",
-        "config": "579edabe.09fe34",
-        "plugin": "docker.io/vieux/sshfs:latest",
-        "action": "inspect",
-        "x": 690,
-        "y": 920,
-        "wires": [
-            [
-                "e65123cd.a5e79"
-            ]
-        ]
-    },
-    {
-        "id": "6d14ccf1.6b3814",
-        "type": "comment",
-        "z": "a3588b61.859a18",
-        "name": "No inspect",
-        "info": "No inspect",
-        "x": 80,
-        "y": 800,
-        "wires": []
-    },
-    {
         "id": "6b65685c.398178",
         "type": "comment",
         "z": "a3588b61.859a18",
         "name": "Can't find 404",
         "info": "Can't find 404 inspect",
         "x": 90,
-        "y": 880,
+        "y": 740,
         "wires": []
     },
     {
@@ -649,7 +571,7 @@
         "name": "",
         "config": "579edabe.09fe34",
         "container": "",
-        "action": "",
+        "action": "top",
         "x": 410,
         "y": 40,
         "wires": [
@@ -703,11 +625,12 @@
         "config": "579edabe.09fe34",
         "service": "",
         "action": "init",
-        "x": 1340,
-        "y": 240,
+        "x": 760,
+        "y": 220,
         "wires": [
             [
-                "617580b.e2e858"
+                "4a3f9efa.f90cd",
+                "2fd95911.71d196"
             ]
         ]
     },
@@ -723,68 +646,11 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 890,
-        "y": 240,
+        "x": 90,
+        "y": 200,
         "wires": [
             [
-                "1c6800a1.b396cf"
-            ]
-        ]
-    },
-    {
-        "id": "617580b.e2e858",
-        "type": "debug",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 1530,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "a15d24ac.038e38",
-        "type": "debug",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1370,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "1c6800a1.b396cf",
-        "type": "change",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.swarm",
-                "pt": "msg",
-                "to": "swarm",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1100,
-        "y": 240,
-        "wires": [
-            [
-                "84a497c7.562dd8",
-                "a15d24ac.038e38"
+                "84a497c7.562dd8"
             ]
         ]
     },
@@ -794,6 +660,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
+        "action": "inspect",
         "x": 840,
         "y": 140,
         "wires": [
@@ -844,13 +711,6 @@
                 "t": "set",
                 "p": "containerId",
                 "pt": "msg",
-                "to": "payload.containerId",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "containerId",
-                "pt": "msg",
                 "to": "req.params.containerId",
                 "tot": "msg"
             }
@@ -860,7 +720,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
+        "x": 620,
         "y": 80,
         "wires": [
             [
@@ -1079,9 +939,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "configId",
+                "p": "nodeId",
                 "pt": "msg",
-                "to": "req.params.configId",
+                "to": "req.params.nodeId",
                 "tot": "msg"
             }
         ],
@@ -1090,38 +950,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
-        "y": 840,
+        "x": 580,
+        "y": 560,
         "wires": [
             [
                 "24af840d.af4efc"
-            ]
-        ]
-    },
-    {
-        "id": "f8b5889d.c7a208",
-        "type": "change",
-        "z": "a3588b61.859a18",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "configId",
-                "pt": "msg",
-                "to": "req.params.configId",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 450,
-        "y": 920,
-        "wires": [
-            [
-                "7fddaf24.79191"
             ]
         ]
     },
@@ -1148,6 +981,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
+        "action": "list",
         "x": 520,
         "y": 660,
         "wires": [
@@ -1163,8 +997,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "image": "",
-        "action": "",
+        "action": "list",
         "x": 510,
         "y": 600,
         "wires": [
@@ -1180,8 +1013,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "",
-        "action": "",
+        "action": "list",
         "x": 520,
         "y": 540,
         "wires": [
@@ -1197,8 +1029,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "task": "",
-        "action": "",
+        "action": "list",
         "x": 510,
         "y": 480,
         "wires": [
@@ -1214,8 +1045,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "node": "",
-        "action": "",
+        "action": "list",
         "x": 510,
         "y": 420,
         "wires": [
@@ -1231,8 +1061,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "secret": "",
-        "action": "",
+        "action": "list",
         "x": 520,
         "y": 300,
         "wires": [
@@ -1248,8 +1077,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "plugin": "",
-        "action": "",
+        "action": "list",
         "x": 510,
         "y": 360,
         "wires": [
@@ -1265,8 +1093,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "network": "",
-        "action": "",
+        "action": "list",
         "x": 520,
         "y": 240,
         "wires": [
@@ -1282,8 +1109,7 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
-        "volume": "",
-        "action": "",
+        "action": "list",
         "x": 520,
         "y": 180,
         "wires": [
@@ -1302,7 +1128,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 250,
         "y": 320,
         "wires": [
             [
@@ -1319,7 +1145,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 340,
+        "x": 260,
         "y": 60,
         "wires": [
             [
@@ -1334,7 +1160,7 @@
         "name": "",
         "statusCode": "200",
         "headers": {},
-        "x": 880,
+        "x": 1040,
         "y": 60,
         "wires": []
     },
@@ -1347,7 +1173,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 340,
+        "x": 260,
         "y": 380,
         "wires": [
             [
@@ -1364,7 +1190,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 250,
         "y": 440,
         "wires": [
             [
@@ -1381,7 +1207,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 250,
         "y": 500,
         "wires": [
             [
@@ -1398,7 +1224,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 250,
         "y": 560,
         "wires": [
             [
@@ -1415,7 +1241,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 320,
+        "x": 240,
         "y": 620,
         "wires": [
             [
@@ -1432,7 +1258,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 250,
         "y": 680,
         "wires": [
             [
@@ -1449,7 +1275,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 250,
         "y": 740,
         "wires": [
             [
@@ -1466,7 +1292,7 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 250,
         "y": 120,
         "wires": [
             [
@@ -1481,12 +1307,13 @@
         "name": "",
         "config": "579edabe.09fe34",
         "container": "",
-        "action": "list",
-        "x": 610,
+        "action": "create",
+        "x": 770,
         "y": 60,
         "wires": [
             [
-                "2fd95911.71d196"
+                "2fd95911.71d196",
+                "4a3f9efa.f90cd"
             ]
         ]
     },
@@ -1496,7 +1323,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 600,
+        "x": 760,
         "y": 120,
         "wires": [
             [
@@ -1510,9 +1337,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "image": "",
         "action": "push",
-        "x": 590,
+        "x": 750,
         "y": 740,
         "wires": [
             [
@@ -1526,9 +1352,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "",
         "action": "",
-        "x": 600,
+        "x": 760,
         "y": 680,
         "wires": [
             [
@@ -1542,9 +1367,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "task": "",
         "action": "",
-        "x": 590,
+        "x": 750,
         "y": 620,
         "wires": [
             [
@@ -1558,9 +1382,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "node": "",
         "action": "",
-        "x": 590,
+        "x": 750,
         "y": 560,
         "wires": [
             [
@@ -1574,9 +1397,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "secret": "",
         "action": "",
-        "x": 600,
+        "x": 760,
         "y": 440,
         "wires": [
             [
@@ -1590,9 +1412,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "plugin": "",
         "action": "",
-        "x": 590,
+        "x": 750,
         "y": 500,
         "wires": [
             [
@@ -1606,9 +1427,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "network": "",
         "action": "",
-        "x": 600,
+        "x": 760,
         "y": 380,
         "wires": [
             [
@@ -1622,9 +1442,8 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "volume": "",
         "action": "",
-        "x": 600,
+        "x": 760,
         "y": 320,
         "wires": [
             [
@@ -1865,7 +1684,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "image": "",
         "action": "upgrade",
         "x": 870,
         "y": 500,
@@ -1882,7 +1700,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "",
         "action": "update",
         "x": 880,
         "y": 420,
@@ -1899,7 +1716,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "task": "",
         "action": "update",
         "x": 870,
         "y": 360,
@@ -1916,7 +1732,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "node": "",
         "action": "",
         "x": 870,
         "y": 680,
@@ -1933,7 +1748,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "secret": "",
         "action": "update",
         "x": 880,
         "y": 240,
@@ -1950,7 +1764,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "plugin": "",
         "action": "update",
         "x": 870,
         "y": 300,
@@ -1967,7 +1780,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "network": "",
         "action": "update",
         "x": 880,
         "y": 180,
@@ -1984,7 +1796,6 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "volume": "",
         "action": "",
         "x": 880,
         "y": 560,
@@ -2018,8 +1829,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
-        "y": 520,
+        "x": 230,
+        "y": 340,
         "wires": [
             [
                 "6375c2da.38a04c"
@@ -2036,7 +1847,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 640,
+        "y": 460,
         "wires": [
             [
                 "2efba4bb.93f3dc"
@@ -2064,7 +1875,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 240,
-        "y": 420,
+        "y": 220,
         "wires": [
             [
                 "ccf6a84.056ed58"
@@ -2080,7 +1891,7 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
+        "x": 230,
         "y": 100,
         "wires": [
             [
@@ -2097,8 +1908,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 240,
-        "y": 600,
+        "x": 220,
+        "y": 400,
         "wires": [
             [
                 "374a48a.82242b8"
@@ -2114,8 +1925,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 240,
-        "y": 700,
+        "x": 220,
+        "y": 520,
         "wires": [
             [
                 "984bca6.cc84438"
@@ -2131,7 +1942,7 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 230,
+        "x": 210,
         "y": 160,
         "wires": [
             [
@@ -2149,7 +1960,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 230,
-        "y": 740,
+        "y": 580,
         "wires": [
             [
                 "d93af4c2.986a38"
@@ -2165,8 +1976,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 240,
-        "y": 460,
+        "x": 220,
+        "y": 280,
         "wires": [
             [
                 "e3f37bd1.adeb58"
@@ -2182,7 +1993,7 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
+        "x": 230,
         "y": 40,
         "wires": [
             [
@@ -2199,10 +2010,11 @@
         "container": "",
         "action": "update",
         "x": 730,
-        "y": 640,
+        "y": 460,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2212,11 +2024,12 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 740,
+        "x": 720,
         "y": 40,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2226,13 +2039,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "image": "",
         "action": "remove",
-        "x": 730,
-        "y": 460,
+        "x": 710,
+        "y": 280,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2242,13 +2055,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "service": "",
         "action": "update",
         "x": 720,
-        "y": 740,
+        "y": 580,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2258,13 +2071,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "task": "",
         "action": "remove",
-        "x": 730,
+        "x": 710,
         "y": 160,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2274,13 +2087,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "node": "",
         "action": "",
-        "x": 730,
-        "y": 700,
+        "x": 710,
+        "y": 520,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2290,13 +2103,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "secret": "",
         "action": "remove",
-        "x": 740,
+        "x": 720,
         "y": 100,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2306,13 +2119,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "plugin": "",
         "action": "update",
-        "x": 730,
-        "y": 600,
+        "x": 710,
+        "y": 400,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2322,13 +2135,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "network": "",
         "action": "update",
         "x": 720,
-        "y": 420,
+        "y": 220,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2338,13 +2151,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "volume": "",
         "action": "remove",
-        "x": 740,
-        "y": 520,
+        "x": 720,
+        "y": 340,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2602,7 +2415,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 290,
-        "y": 560,
+        "y": 800,
         "wires": [
             [
                 "899857a2.2b2d68"
@@ -2629,7 +2442,7 @@
         "to": "",
         "reg": false,
         "x": 590,
-        "y": 560,
+        "y": 800,
         "wires": [
             [
                 "6fccc381.7f32dc"
@@ -2642,10 +2455,9 @@
         "z": "a3588b61.859a18",
         "name": "",
         "config": "579edabe.09fe34",
-        "plugin": "",
         "action": "inspect",
         "x": 840,
-        "y": 560,
+        "y": 800,
         "wires": [
             [
                 "194c5206.89e86e",
@@ -2779,8 +2591,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 90,
-        "y": 20,
+        "x": 110,
+        "y": 40,
         "wires": [
             [
                 "730e7d9a.66b034"
@@ -2828,7 +2640,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"configId\":\"kzriy8bbyfznpyrf3k4syeoch\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2848,7 +2660,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"serviceId\":\"89e2zlf1z00uez9epcsycmyd3\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2868,7 +2680,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"secretId\":\"shlt3aqpmobcf99s32s5ehy4q\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2888,7 +2700,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"networkId\":\"hp7ex1vsocozvv1q8juekiqjn\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2908,7 +2720,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"volumeId\":\"docker_mongodbs\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2928,7 +2740,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"imageId\":\"sha256:35ea6684fbc506aaac144ae380a4632e8fce38dca4dc9add89fd108a3347c492\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2948,7 +2760,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"taskId\":\"11w5tahas5hyyb8wl8i8s8xuh\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2968,14 +2780,14 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{\"pluginId\":\"2b667e8f3862cbd540ee051c08dd4080af7e95fa8dc805e434e6073e569d0f46\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 540,
+        "y": 780,
         "wires": [
             [
                 "899857a2.2b2d68"
@@ -3234,6 +3046,496 @@
         "complete": "false",
         "x": 810,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c9d0174e.c715a8",
+        "type": "docker-events",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "d1769bb3.321258"
+            ]
+        ]
+    },
+    {
+        "id": "d1769bb3.321258",
+        "type": "websocket out",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "server": "8d7688bb.31a5d8",
+        "client": "",
+        "x": 710,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a7371f99.9f763",
+        "type": "inject",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "topic": "",
+        "payload": "{\"nodeId\":\"5zjwa6ubtnwkrymg5pwfvdcyr\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 540,
+        "wires": [
+            [
+                "c75a07ba.e832b8"
+            ]
+        ]
+    },
+    {
+        "id": "acae72a.6ecba9",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "34827535.ddbffa"
+            ]
+        ]
+    },
+    {
+        "id": "4a3f9efa.f90cd",
+        "type": "debug",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1050,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "198c904a.9444c",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "8f13713f.48284"
+            ]
+        ]
+    },
+    {
+        "id": "17b8de39.c470b2",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "eae2d21f.0c63b"
+            ]
+        ]
+    },
+    {
+        "id": "7e8fa376.a872fc",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "fce9e726.e91d38"
+            ]
+        ]
+    },
+    {
+        "id": "a9340491.aa57e8",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "76ea37f4.410658"
+            ]
+        ]
+    },
+    {
+        "id": "db9c6941.abcd18",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 480,
+        "wires": [
+            [
+                "1970e48d.9aa39b"
+            ]
+        ]
+    },
+    {
+        "id": "8fdf2fe0.7606e",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 540,
+        "wires": [
+            [
+                "29c0f6b3.a54c3a"
+            ]
+        ]
+    },
+    {
+        "id": "db900284.3d1a8",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 600,
+        "wires": [
+            [
+                "a6f17e9f.2badc"
+            ]
+        ]
+    },
+    {
+        "id": "d5f8b031.7412e",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 660,
+        "wires": [
+            [
+                "d65636cd.4082f8"
+            ]
+        ]
+    },
+    {
+        "id": "a5264665.1f0d08",
+        "type": "inject",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 720,
+        "wires": [
+            [
+                "3fce7309.7e875c"
+            ]
+        ]
+    },
+    {
+        "id": "e6e05142.2a188",
+        "type": "http in",
+        "z": "41f777e2.d72c88",
+        "name": "",
+        "url": "/swarm/create",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "84a497c7.562dd8"
+            ]
+        ]
+    },
+    {
+        "id": "109cbe29.9e9062",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "e665e95d.809b28"
+            ]
+        ]
+    },
+    {
+        "id": "ed287cd6.0a414",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "e07d7223.81e75"
+            ]
+        ]
+    },
+    {
+        "id": "f4a0ad50.76844",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "2756d630.2c3c9a"
+            ]
+        ]
+    },
+    {
+        "id": "50515d5a.3143c4",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "1ec36eb4.4640d1"
+            ]
+        ]
+    },
+    {
+        "id": "cd783aa.4dcf1c8",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "ce6adad1.0d2fb8"
+            ]
+        ]
+    },
+    {
+        "id": "ac45b72f.3f6658",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "d69aee88.0bc6a"
+            ]
+        ]
+    },
+    {
+        "id": "9d6b6589.7a9ca8",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 480,
+        "wires": [
+            [
+                "b8c42a01.e397c8"
+            ]
+        ]
+    },
+    {
+        "id": "9b6c63c1.6e876",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "e1b8fa4d.44c2d8"
+            ]
+        ]
+    },
+    {
+        "id": "50a22b49.268264",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "ed1c4f77.382cd"
+            ]
+        ]
+    },
+    {
+        "id": "324d4aea.a5fc26",
+        "type": "inject",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "topic": "",
+        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "7fb27187.8d311"
+            ]
+        ]
+    },
+    {
+        "id": "6901c8a6.432318",
+        "type": "debug",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1010,
+        "y": 100,
         "wires": []
     }
 ]
