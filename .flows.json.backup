@@ -626,7 +626,7 @@
         "service": "",
         "action": "init",
         "x": 760,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "4a3f9efa.f90cd",
@@ -647,7 +647,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "84a497c7.562dd8"
@@ -1129,7 +1129,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 320,
+        "y": 240,
         "wires": [
             [
                 "eae2d21f.0c63b"
@@ -1174,7 +1174,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 260,
-        "y": 380,
+        "y": 300,
         "wires": [
             [
                 "fce9e726.e91d38"
@@ -1191,7 +1191,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 440,
+        "y": 360,
         "wires": [
             [
                 "76ea37f4.410658"
@@ -1208,7 +1208,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 500,
+        "y": 420,
         "wires": [
             [
                 "1970e48d.9aa39b"
@@ -1225,7 +1225,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 560,
+        "y": 740,
         "wires": [
             [
                 "29c0f6b3.a54c3a"
@@ -1242,7 +1242,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 240,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "a6f17e9f.2badc"
@@ -1259,7 +1259,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 680,
+        "y": 480,
         "wires": [
             [
                 "d65636cd.4082f8"
@@ -1276,7 +1276,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 740,
+        "y": 540,
         "wires": [
             [
                 "3fce7309.7e875c"
@@ -1323,6 +1323,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
+        "action": "create",
         "x": 760,
         "y": 120,
         "wires": [
@@ -1337,9 +1338,9 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "push",
+        "action": "create",
         "x": 750,
-        "y": 740,
+        "y": 540,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1352,9 +1353,9 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "",
+        "action": "create",
         "x": 760,
-        "y": 680,
+        "y": 480,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1369,7 +1370,7 @@
         "config": "579edabe.09fe34",
         "action": "",
         "x": 750,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1384,7 +1385,7 @@
         "config": "579edabe.09fe34",
         "action": "",
         "x": 750,
-        "y": 560,
+        "y": 740,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1397,9 +1398,9 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "",
+        "action": "create",
         "x": 760,
-        "y": 440,
+        "y": 360,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1412,9 +1413,9 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "",
+        "action": "create",
         "x": 750,
-        "y": 500,
+        "y": 420,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1427,9 +1428,9 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "",
+        "action": "create",
         "x": 760,
-        "y": 380,
+        "y": 300,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1442,9 +1443,9 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "",
+        "action": "create",
         "x": 760,
-        "y": 320,
+        "y": 240,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1829,8 +1830,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
-        "y": 520,
+        "x": 230,
+        "y": 340,
         "wires": [
             [
                 "6375c2da.38a04c"
@@ -1847,7 +1848,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 640,
+        "y": 460,
         "wires": [
             [
                 "2efba4bb.93f3dc"
@@ -1875,7 +1876,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 240,
-        "y": 420,
+        "y": 220,
         "wires": [
             [
                 "ccf6a84.056ed58"
@@ -1891,7 +1892,7 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
+        "x": 230,
         "y": 100,
         "wires": [
             [
@@ -1908,8 +1909,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 240,
-        "y": 600,
+        "x": 220,
+        "y": 400,
         "wires": [
             [
                 "374a48a.82242b8"
@@ -1925,8 +1926,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 240,
-        "y": 700,
+        "x": 220,
+        "y": 520,
         "wires": [
             [
                 "984bca6.cc84438"
@@ -1942,7 +1943,7 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 230,
+        "x": 210,
         "y": 160,
         "wires": [
             [
@@ -1960,7 +1961,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 230,
-        "y": 740,
+        "y": 580,
         "wires": [
             [
                 "d93af4c2.986a38"
@@ -1976,8 +1977,8 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 240,
-        "y": 460,
+        "x": 220,
+        "y": 280,
         "wires": [
             [
                 "e3f37bd1.adeb58"
@@ -1993,7 +1994,7 @@
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 250,
+        "x": 230,
         "y": 40,
         "wires": [
             [
@@ -2010,10 +2011,11 @@
         "container": "",
         "action": "update",
         "x": 730,
-        "y": 640,
+        "y": 460,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2023,11 +2025,13 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 740,
+        "action": "remove",
+        "x": 720,
         "y": 40,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2038,11 +2042,12 @@
         "name": "",
         "config": "579edabe.09fe34",
         "action": "remove",
-        "x": 730,
-        "y": 460,
+        "x": 710,
+        "y": 280,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2054,10 +2059,11 @@
         "config": "579edabe.09fe34",
         "action": "update",
         "x": 720,
-        "y": 740,
+        "y": 580,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2068,11 +2074,12 @@
         "name": "",
         "config": "579edabe.09fe34",
         "action": "remove",
-        "x": 730,
+        "x": 710,
         "y": 160,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2083,11 +2090,12 @@
         "name": "",
         "config": "579edabe.09fe34",
         "action": "",
-        "x": 730,
-        "y": 700,
+        "x": 710,
+        "y": 520,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2098,11 +2106,12 @@
         "name": "",
         "config": "579edabe.09fe34",
         "action": "remove",
-        "x": 740,
+        "x": 720,
         "y": 100,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2113,11 +2122,12 @@
         "name": "",
         "config": "579edabe.09fe34",
         "action": "update",
-        "x": 730,
-        "y": 600,
+        "x": 710,
+        "y": 400,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2129,10 +2139,11 @@
         "config": "579edabe.09fe34",
         "action": "update",
         "x": 720,
-        "y": 420,
+        "y": 220,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2143,11 +2154,12 @@
         "name": "",
         "config": "579edabe.09fe34",
         "action": "remove",
-        "x": 740,
-        "y": 520,
+        "x": 720,
+        "y": 340,
         "wires": [
             [
-                "7850fd85.5a08d4"
+                "7850fd85.5a08d4",
+                "6901c8a6.432318"
             ]
         ]
     },
@@ -2610,7 +2622,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2620,7 +2632,7 @@
         "y": 60,
         "wires": [
             [
-                "51ae3860.2ed588"
+                "9dd0cd66.36854"
             ]
         ]
     },
@@ -2630,7 +2642,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"configId\":\"kzriy8bbyfznpyrf3k4syeoch\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2640,7 +2652,7 @@
         "y": 120,
         "wires": [
             [
-                "e5b18c96.f9325"
+                "65efb481.68580c"
             ]
         ]
     },
@@ -2650,7 +2662,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"serviceId\":\"89e2zlf1z00uez9epcsycmyd3\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2660,7 +2672,7 @@
         "y": 180,
         "wires": [
             [
-                "3d42a7ec.99fd38"
+                "cc604bdb.057548"
             ]
         ]
     },
@@ -2670,7 +2682,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"secretId\":\"shlt3aqpmobcf99s32s5ehy4q\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2680,7 +2692,7 @@
         "y": 240,
         "wires": [
             [
-                "4323fbe2.bb79d4"
+                "25b52ce.a1a9ad4"
             ]
         ]
     },
@@ -2690,7 +2702,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"networkId\":\"hp7ex1vsocozvv1q8juekiqjn\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2700,7 +2712,7 @@
         "y": 300,
         "wires": [
             [
-                "f112e6c4.021818"
+                "fc06d41c.ac24d8"
             ]
         ]
     },
@@ -2710,7 +2722,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"volumeId\":\"docker_mongodbs\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2720,7 +2732,7 @@
         "y": 360,
         "wires": [
             [
-                "b83c04a6.2fc688"
+                "7fd6ff14.52f31"
             ]
         ]
     },
@@ -2730,7 +2742,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"imageId\":\"sha256:35ea6684fbc506aaac144ae380a4632e8fce38dca4dc9add89fd108a3347c492\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2740,7 +2752,7 @@
         "y": 420,
         "wires": [
             [
-                "b30a7cb0.085ab"
+                "77f56ddc.e9d6c4"
             ]
         ]
     },
@@ -2750,7 +2762,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"taskId\":\"11w5tahas5hyyb8wl8i8s8xuh\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2760,7 +2772,7 @@
         "y": 480,
         "wires": [
             [
-                "54b33ee6.590af"
+                "e70f2db5.1e4c6"
             ]
         ]
     },
@@ -2770,7 +2782,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"pluginId\":\"2b667e8f3862cbd540ee051c08dd4080af7e95fa8dc805e434e6073e569d0f46\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2780,7 +2792,7 @@
         "y": 780,
         "wires": [
             [
-                "899857a2.2b2d68"
+                "ecdcb9f0.c14c88"
             ]
         ]
     },
@@ -2790,7 +2802,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2810,7 +2822,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3069,7 +3081,7 @@
         "z": "a3588b61.859a18",
         "name": "",
         "topic": "",
-        "payload": "{\"nodeId\":\"5zjwa6ubtnwkrymg5pwfvdcyr\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3079,7 +3091,7 @@
         "y": 540,
         "wires": [
             [
-                "c75a07ba.e832b8"
+                "bf1733e8.f0872"
             ]
         ]
     },
@@ -3123,7 +3135,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3150,7 +3162,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 300,
+        "y": 220,
         "wires": [
             [
                 "eae2d21f.0c63b"
@@ -3170,7 +3182,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 360,
+        "y": 280,
         "wires": [
             [
                 "fce9e726.e91d38"
@@ -3190,7 +3202,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 420,
+        "y": 340,
         "wires": [
             [
                 "76ea37f4.410658"
@@ -3210,7 +3222,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 480,
+        "y": 400,
         "wires": [
             [
                 "1970e48d.9aa39b"
@@ -3230,7 +3242,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 540,
+        "y": 720,
         "wires": [
             [
                 "29c0f6b3.a54c3a"
@@ -3250,7 +3262,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 600,
+        "y": 660,
         "wires": [
             [
                 "a6f17e9f.2badc"
@@ -3270,7 +3282,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 660,
+        "y": 460,
         "wires": [
             [
                 "d65636cd.4082f8"
@@ -3290,7 +3302,7 @@
         "once": false,
         "onceDelay": 0.1,
         "x": 90,
-        "y": 720,
+        "y": 520,
         "wires": [
             [
                 "3fce7309.7e875c"
@@ -3307,7 +3319,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 250,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "84a497c7.562dd8"
@@ -3511,6 +3523,410 @@
         "wires": [
             [
                 "7fb27187.8d311"
+            ]
+        ]
+    },
+    {
+        "id": "6901c8a6.432318",
+        "type": "debug",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1010,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e1a86b5d.6a51a8",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"configId\":\"gepiir1g7qi18mo9rrxfi8hsg\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 20,
+        "wires": [
+            [
+                "8b08a0ac.70596"
+            ]
+        ]
+    },
+    {
+        "id": "2938c441.8ba12c",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 80,
+        "wires": [
+            [
+                "4e32f78c.78ac68"
+            ]
+        ]
+    },
+    {
+        "id": "7e91f698.414168",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 140,
+        "wires": [
+            [
+                "82556171.b791"
+            ]
+        ]
+    },
+    {
+        "id": "8ca58a9a.fbe438",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 200,
+        "wires": [
+            [
+                "ccf6a84.056ed58"
+            ]
+        ]
+    },
+    {
+        "id": "6b024b3d.f7df34",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 260,
+        "wires": [
+            [
+                "e3f37bd1.adeb58"
+            ]
+        ]
+    },
+    {
+        "id": "ded4809a.1df18",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 320,
+        "wires": [
+            [
+                "6375c2da.38a04c"
+            ]
+        ]
+    },
+    {
+        "id": "3d511e04.e8eb42",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 380,
+        "wires": [
+            [
+                "374a48a.82242b8"
+            ]
+        ]
+    },
+    {
+        "id": "67a19276.58918c",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 440,
+        "wires": [
+            [
+                "2efba4bb.93f3dc"
+            ]
+        ]
+    },
+    {
+        "id": "d8284a8e.bd7bf8",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 500,
+        "wires": [
+            [
+                "984bca6.cc84438"
+            ]
+        ]
+    },
+    {
+        "id": "419efbb5.f653d4",
+        "type": "inject",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "topic": "",
+        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 70,
+        "y": 560,
+        "wires": [
+            [
+                "d93af4c2.986a38"
+            ]
+        ]
+    },
+    {
+        "id": "9dd0cd66.36854",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 60,
+        "wires": [
+            [
+                "51ae3860.2ed588"
+            ]
+        ]
+    },
+    {
+        "id": "65efb481.68580c",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"configId\":\"kzriy8bbyfznpyrf3k4syeoch\"}",
+        "output": "json",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "e5b18c96.f9325"
+            ]
+        ]
+    },
+    {
+        "id": "cc604bdb.057548",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"serviceId\":\"89e2zlf1z00uez9epcsycmyd3\"}",
+        "output": "json",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "3d42a7ec.99fd38"
+            ]
+        ]
+    },
+    {
+        "id": "25b52ce.a1a9ad4",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"secretId\":\"shlt3aqpmobcf99s32s5ehy4q\"}",
+        "output": "json",
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "4323fbe2.bb79d4"
+            ]
+        ]
+    },
+    {
+        "id": "fc06d41c.ac24d8",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"networkId\":\"hp7ex1vsocozvv1q8juekiqjn\"}",
+        "output": "json",
+        "x": 240,
+        "y": 300,
+        "wires": [
+            [
+                "f112e6c4.021818"
+            ]
+        ]
+    },
+    {
+        "id": "7fd6ff14.52f31",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"volumeId\":\"docker_mongodbs\"}",
+        "output": "json",
+        "x": 240,
+        "y": 360,
+        "wires": [
+            [
+                "b83c04a6.2fc688"
+            ]
+        ]
+    },
+    {
+        "id": "77f56ddc.e9d6c4",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"imageId\":\"sha256:35ea6684fbc506aaac144ae380a4632e8fce38dca4dc9add89fd108a3347c492\"}",
+        "output": "json",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "b30a7cb0.085ab"
+            ]
+        ]
+    },
+    {
+        "id": "e70f2db5.1e4c6",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"taskId\":\"11w5tahas5hyyb8wl8i8s8xuh\"}",
+        "output": "json",
+        "x": 240,
+        "y": 480,
+        "wires": [
+            [
+                "54b33ee6.590af"
+            ]
+        ]
+    },
+    {
+        "id": "bf1733e8.f0872",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"nodeId\":\"5zjwa6ubtnwkrymg5pwfvdcyr\"}",
+        "output": "json",
+        "x": 240,
+        "y": 540,
+        "wires": [
+            [
+                "c75a07ba.e832b8"
+            ]
+        ]
+    },
+    {
+        "id": "ecdcb9f0.c14c88",
+        "type": "template",
+        "z": "a3588b61.859a18",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"pluginId\":\"2b667e8f3862cbd540ee051c08dd4080af7e95fa8dc805e434e6073e569d0f46\"}",
+        "output": "json",
+        "x": 240,
+        "y": 780,
+        "wires": [
+            [
+                "899857a2.2b2d68"
             ]
         ]
     }
