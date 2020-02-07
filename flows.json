@@ -640,7 +640,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"swarm\":{\"ListenAddr\":\"0.0.0.0:2377\",\"AdvertiseAddr\":\"192.168.1.1:2377\",\"ForceNewCluster\":false,\"Spec\":{\"Orchestration\":{},\"Raft\":{},\"Dispatcher\":{},\"CAConfig\":{}}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2587,7 +2587,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -2597,7 +2597,7 @@
         "y": 40,
         "wires": [
             [
-                "730e7d9a.66b034"
+                "f987921a.93c4c"
             ]
         ]
     },
@@ -3101,7 +3101,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3135,7 +3135,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3155,7 +3155,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3175,7 +3175,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3195,7 +3195,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3215,7 +3215,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3235,7 +3235,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3255,7 +3255,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3275,7 +3275,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3295,7 +3295,7 @@
         "z": "41f777e2.d72c88",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3332,7 +3332,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3342,7 +3342,7 @@
         "y": 100,
         "wires": [
             [
-                "e665e95d.809b28"
+                "8fabd38.572b93"
             ]
         ]
     },
@@ -3352,7 +3352,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3362,7 +3362,7 @@
         "y": 160,
         "wires": [
             [
-                "e07d7223.81e75"
+                "51bf1099.64cb"
             ]
         ]
     },
@@ -3372,7 +3372,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3382,7 +3382,7 @@
         "y": 220,
         "wires": [
             [
-                "2756d630.2c3c9a"
+                "4c82f74f.6aff88"
             ]
         ]
     },
@@ -3392,7 +3392,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3402,7 +3402,7 @@
         "y": 280,
         "wires": [
             [
-                "1ec36eb4.4640d1"
+                "ce3c4587.87b928"
             ]
         ]
     },
@@ -3412,7 +3412,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3422,7 +3422,7 @@
         "y": 340,
         "wires": [
             [
-                "ce6adad1.0d2fb8"
+                "179a5f58.2a0501"
             ]
         ]
     },
@@ -3432,7 +3432,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3442,7 +3442,7 @@
         "y": 400,
         "wires": [
             [
-                "d69aee88.0bc6a"
+                "2d4e0270.1b580e"
             ]
         ]
     },
@@ -3452,7 +3452,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3462,7 +3462,7 @@
         "y": 480,
         "wires": [
             [
-                "b8c42a01.e397c8"
+                "ca846faf.403e1"
             ]
         ]
     },
@@ -3472,7 +3472,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3482,7 +3482,7 @@
         "y": 540,
         "wires": [
             [
-                "e1b8fa4d.44c2d8"
+                "5a0f692f.659468"
             ]
         ]
     },
@@ -3492,7 +3492,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3502,7 +3502,7 @@
         "y": 600,
         "wires": [
             [
-                "ed1c4f77.382cd"
+                "d0d3451f.802408"
             ]
         ]
     },
@@ -3512,7 +3512,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "topic": "",
-        "payload": "{\"containerId\":\"nodered_nodered_1\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3522,7 +3522,7 @@
         "y": 660,
         "wires": [
             [
-                "7fb27187.8d311"
+                "d76af5ab.a5ac18"
             ]
         ]
     },
@@ -3546,7 +3546,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"configId\":\"gepiir1g7qi18mo9rrxfi8hsg\"}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3556,7 +3556,7 @@
         "y": 20,
         "wires": [
             [
-                "8b08a0ac.70596"
+                "7b045f9f.8d1a8"
             ]
         ]
     },
@@ -3566,7 +3566,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3576,7 +3576,7 @@
         "y": 80,
         "wires": [
             [
-                "4e32f78c.78ac68"
+                "d48fb2ed.60dc5"
             ]
         ]
     },
@@ -3586,7 +3586,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3596,7 +3596,7 @@
         "y": 140,
         "wires": [
             [
-                "82556171.b791"
+                "e5bc7b81.f77ab8"
             ]
         ]
     },
@@ -3606,7 +3606,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3616,7 +3616,7 @@
         "y": 200,
         "wires": [
             [
-                "ccf6a84.056ed58"
+                "f1fe2030.a9bd1"
             ]
         ]
     },
@@ -3626,7 +3626,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3636,7 +3636,7 @@
         "y": 260,
         "wires": [
             [
-                "e3f37bd1.adeb58"
+                "e83031e8.a6da"
             ]
         ]
     },
@@ -3646,7 +3646,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3656,7 +3656,7 @@
         "y": 320,
         "wires": [
             [
-                "6375c2da.38a04c"
+                "f339536f.38786"
             ]
         ]
     },
@@ -3666,7 +3666,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3676,7 +3676,7 @@
         "y": 380,
         "wires": [
             [
-                "374a48a.82242b8"
+                "8996d83e.177488"
             ]
         ]
     },
@@ -3686,7 +3686,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3696,7 +3696,7 @@
         "y": 440,
         "wires": [
             [
-                "2efba4bb.93f3dc"
+                "fd08a8bc.937cb8"
             ]
         ]
     },
@@ -3706,7 +3706,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3716,7 +3716,7 @@
         "y": 500,
         "wires": [
             [
-                "984bca6.cc84438"
+                "5cf6aeee.57384"
             ]
         ]
     },
@@ -3726,7 +3726,7 @@
         "z": "48a04689.e192c8",
         "name": "",
         "topic": "",
-        "payload": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "payload": "{}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -3736,7 +3736,7 @@
         "y": 560,
         "wires": [
             [
-                "d93af4c2.986a38"
+                "b54ad54f.a409c8"
             ]
         ]
     },
@@ -3937,10 +3937,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{\"options\":{\"Name\":\"PHP-php\",\"TaskTemplate\":{\"ContainerSpec\":{\"Image\":\"569484333419.dkr.ecr.us-east-1.amazonaws.com/fpm:7.3-buster-7.4.2\",\"Args\":[\"yes\"],\"Env\":[\"FLOWS=my_flows.json\",\"NODE_RED_ENABLE_PROJECTS=true\"],\"Mounts\":[{\"Type\":\"bind\",\"Source\":\"/var/run/docker.sock\",\"Target\":\"/var/run/docker.sock\"},{\"Type\":\"bind\",\"Source\":\"nodered_data1\",\"Target\":\"/usr/src/node-red/\"},{\"Type\":\"bind\",\"Source\":\"nodered_data2\",\"Target\":\"/data\"},{\"Type\":\"bind\",\"Source\":\"/Users/ethanbrooks/Documents\",\"Target\":\"/opt/\"},{\"Type\":\"bind\",\"Source\":\"./settings.js\",\"ReadOnly\":true,\"Target\":\"/data/settings.js\"}]},\"RestartPolicy\":{\"Condition\":\"on-failure\",\"Delay\":5000000,\"MaxAttempts\":3,\"Window\":10000000},\"Resources\":{\"Limits\":{\"NanoCPUs\":1000000000,\"MemoryBytes\":104857600},\"Reservations\":{\"MemoryBytes\":104857600}},\"Placement\":{\"Constraints\":[\"node.role == manager\"],\"Preferences\":[{\"Spread\":{\"SpreadDescriptor\":\"node.labels.zone\"}}]}},\"UpdateConfig\":{\"Parallelism\":1,\"Delay\":10000000},\"Mode\":{\"Replicated\":{\"Replicas\":1}},\"Labels\":{\"traefik.enable\":\"\\\"true\\\"\",\"traefik.http.services.nodered.loadbalancer.server.port\":\"1880\",\"traefik.http.routers.nodered.tls\":\"\\\"true\\\"\",\"traefik.http.routers.nodered.rule\":\"Host(`nodered.localhost.conduit3.com`)\",\"traefik.http.routers.nodered.entrypoints\":\"https\",\"traefik.http.routers.nodered.tls.certresolver\":\"route53_resolver\"},\"EndpointSpec\":{\"Ports\":[{\"Protocol\":\"tcp\",\"PublishedPort\":1880,\"TargetPort\":1880}]}}}",
+        "output": "json",
         "x": 220,
         "y": 40,
         "wires": [
@@ -3956,10 +3956,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 100,
         "wires": [
@@ -3975,10 +3975,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 160,
         "wires": [
@@ -3994,10 +3994,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 220,
         "wires": [
@@ -4013,10 +4013,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 280,
         "wires": [
@@ -4032,10 +4032,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 340,
         "wires": [
@@ -4051,10 +4051,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 400,
         "wires": [
@@ -4070,10 +4070,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 460,
         "wires": [
@@ -4089,10 +4089,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 520,
         "wires": [
@@ -4108,10 +4108,10 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 660,
         "wires": [
@@ -4127,15 +4127,414 @@
         "name": "",
         "field": "payload",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
+        "template": "{}",
+        "output": "json",
         "x": 220,
         "y": 720,
         "wires": [
             [
                 "29c0f6b3.a54c3a"
+            ]
+        ]
+    },
+    {
+        "id": "7b045f9f.8d1a8",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"configId\":\"gepiir1g7qi18mo9rrxfi8hsg\"}",
+        "output": "json",
+        "x": 240,
+        "y": 20,
+        "wires": [
+            [
+                "8b08a0ac.70596"
+            ]
+        ]
+    },
+    {
+        "id": "d48fb2ed.60dc5",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"options\":{\"Name\":\"server.conf\",\"Labels\":{\"foo\":\"bar\"},\"Data\":\"VEhJUyBJUyBOT1QgQSBSRUFMIENFUlRJRklDQVRFCg==\"}}",
+        "output": "json",
+        "x": 240,
+        "y": 80,
+        "wires": [
+            [
+                "4e32f78c.78ac68"
+            ]
+        ]
+    },
+    {
+        "id": "e5bc7b81.f77ab8",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "82556171.b791"
+            ]
+        ]
+    },
+    {
+        "id": "f1fe2030.a9bd1",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "ccf6a84.056ed58"
+            ]
+        ]
+    },
+    {
+        "id": "e83031e8.a6da",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "e3f37bd1.adeb58"
+            ]
+        ]
+    },
+    {
+        "id": "f339536f.38786",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "6375c2da.38a04c"
+            ]
+        ]
+    },
+    {
+        "id": "8996d83e.177488",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "374a48a.82242b8"
+            ]
+        ]
+    },
+    {
+        "id": "fd08a8bc.937cb8",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 440,
+        "wires": [
+            [
+                "2efba4bb.93f3dc"
+            ]
+        ]
+    },
+    {
+        "id": "5cf6aeee.57384",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "984bca6.cc84438"
+            ]
+        ]
+    },
+    {
+        "id": "b54ad54f.a409c8",
+        "type": "template",
+        "z": "48a04689.e192c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "d93af4c2.986a38"
+            ]
+        ]
+    },
+    {
+        "id": "f987921a.93c4c",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 40,
+        "wires": [
+            [
+                "730e7d9a.66b034"
+            ]
+        ]
+    },
+    {
+        "id": "8fabd38.572b93",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "e665e95d.809b28"
+            ]
+        ]
+    },
+    {
+        "id": "51bf1099.64cb",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "e07d7223.81e75"
+            ]
+        ]
+    },
+    {
+        "id": "4c82f74f.6aff88",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "2756d630.2c3c9a"
+            ]
+        ]
+    },
+    {
+        "id": "ce3c4587.87b928",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "1ec36eb4.4640d1"
+            ]
+        ]
+    },
+    {
+        "id": "179a5f58.2a0501",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 340,
+        "wires": [
+            [
+                "ce6adad1.0d2fb8"
+            ]
+        ]
+    },
+    {
+        "id": "2d4e0270.1b580e",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "d69aee88.0bc6a"
+            ]
+        ]
+    },
+    {
+        "id": "ca846faf.403e1",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "b8c42a01.e397c8"
+            ]
+        ]
+    },
+    {
+        "id": "5a0f692f.659468",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 540,
+        "wires": [
+            [
+                "e1b8fa4d.44c2d8"
+            ]
+        ]
+    },
+    {
+        "id": "d0d3451f.802408",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 600,
+        "wires": [
+            [
+                "ed1c4f77.382cd"
+            ]
+        ]
+    },
+    {
+        "id": "d76af5ab.a5ac18",
+        "type": "template",
+        "z": "eb60acc4.65ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
+        "output": "json",
+        "x": 260,
+        "y": 660,
+        "wires": [
+            [
+                "7fb27187.8d311"
             ]
         ]
     }
