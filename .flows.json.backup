@@ -249,7 +249,7 @@
         "container": "",
         "action": "inspect",
         "options": "",
-        "x": 850,
+        "x": 880,
         "y": 80,
         "wires": [
             [
@@ -1109,8 +1109,9 @@
         "z": "4c3b05bf.206fbc",
         "name": "",
         "config": "579edabe.09fe34",
+        "volume": "",
         "action": "list",
-        "x": 520,
+        "x": 510,
         "y": 180,
         "wires": [
             [
@@ -1212,40 +1213,6 @@
         "wires": [
             [
                 "1970e48d.9aa39b"
-            ]
-        ]
-    },
-    {
-        "id": "fea11257.3180a",
-        "type": "http in",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "url": "/nodes/create",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 250,
-        "y": 740,
-        "wires": [
-            [
-                "29c0f6b3.a54c3a"
-            ]
-        ]
-    },
-    {
-        "id": "a51e76f7.f3a318",
-        "type": "http in",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "url": "/tasks/create",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 240,
-        "y": 680,
-        "wires": [
-            [
-                "a6f17e9f.2badc"
             ]
         ]
     },
@@ -1356,36 +1323,6 @@
         "action": "create",
         "x": 760,
         "y": 480,
-        "wires": [
-            [
-                "2fd95911.71d196"
-            ]
-        ]
-    },
-    {
-        "id": "a6f17e9f.2badc",
-        "type": "docker-task-actions",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "config": "579edabe.09fe34",
-        "action": "",
-        "x": 750,
-        "y": 680,
-        "wires": [
-            [
-                "2fd95911.71d196"
-            ]
-        ]
-    },
-    {
-        "id": "29c0f6b3.a54c3a",
-        "type": "docker-node-actions",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "config": "579edabe.09fe34",
-        "action": "",
-        "x": 750,
-        "y": 740,
         "wires": [
             [
                 "2fd95911.71d196"
@@ -1670,7 +1607,8 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "x": 880,
+        "action": "update",
+        "x": 910,
         "y": 120,
         "wires": [
             [
@@ -1733,8 +1671,9 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "",
-        "x": 870,
+        "node": "",
+        "action": "update",
+        "x": 900,
         "y": 680,
         "wires": [
             [
@@ -1781,6 +1720,7 @@
         "z": "eb60acc4.65ffd",
         "name": "",
         "config": "579edabe.09fe34",
+        "network": "",
         "action": "update",
         "x": 880,
         "y": 180,
@@ -2073,8 +2013,9 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "remove",
-        "x": 710,
+        "task": "",
+        "action": "inspect",
+        "x": 730,
         "y": 160,
         "wires": [
             [
@@ -2089,8 +2030,9 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "",
-        "x": 710,
+        "node": "",
+        "action": "remove",
+        "x": 740,
         "y": 520,
         "wires": [
             [
@@ -2137,8 +2079,9 @@
         "z": "48a04689.e192c8",
         "name": "",
         "config": "579edabe.09fe34",
-        "action": "update",
-        "x": 720,
+        "network": "",
+        "action": "remove",
+        "x": 750,
         "y": 220,
         "wires": [
             [
@@ -3228,46 +3171,6 @@
         ]
     },
     {
-        "id": "8fdf2fe0.7606e",
-        "type": "inject",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 90,
-        "y": 720,
-        "wires": [
-            [
-                "22499ff4.8051f"
-            ]
-        ]
-    },
-    {
-        "id": "db900284.3d1a8",
-        "type": "inject",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 90,
-        "y": 660,
-        "wires": [
-            [
-                "d0c0ee24.1c2cf"
-            ]
-        ]
-    },
-    {
         "id": "d5f8b031.7412e",
         "type": "inject",
         "z": "41f777e2.d72c88",
@@ -3747,7 +3650,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{}",
+        "template": "{\"containerId\":\"nodered_nodered_1\"}",
         "output": "json",
         "x": 240,
         "y": 60,
@@ -4096,44 +3999,6 @@
         "wires": [
             [
                 "3fce7309.7e875c"
-            ]
-        ]
-    },
-    {
-        "id": "d0c0ee24.1c2cf",
-        "type": "template",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "{}",
-        "output": "json",
-        "x": 220,
-        "y": 660,
-        "wires": [
-            [
-                "a6f17e9f.2badc"
-            ]
-        ]
-    },
-    {
-        "id": "22499ff4.8051f",
-        "type": "template",
-        "z": "41f777e2.d72c88",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "{}",
-        "output": "json",
-        "x": 220,
-        "y": 720,
-        "wires": [
-            [
-                "29c0f6b3.a54c3a"
             ]
         ]
     },
@@ -4592,6 +4457,7 @@
         "z": "caac33cb.80222",
         "name": "",
         "config": "579edabe.09fe34",
+        "volume": "nodered_nodered_data1",
         "action": "prune",
         "x": 460,
         "y": 200,
@@ -4679,7 +4545,7 @@
         "container": "nodered_nodered_1",
         "action": "exec",
         "options": "ls -la",
-        "x": 340,
+        "x": 470,
         "y": 280,
         "wires": [
             [
