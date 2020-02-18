@@ -73,7 +73,7 @@
         "id": "5bd79fa5.d89eb",
         "type": "websocket-listener",
         "z": "",
-        "path": "ws/container",
+        "path": "ws/stats",
         "wholemsg": "false"
     },
     {
@@ -597,25 +597,6 @@
             [
                 "e3217db6.42983"
             ]
-        ]
-    },
-    {
-        "id": "9e2460f7.f3f74",
-        "type": "uibuilder",
-        "z": "bcf00345.14dd2",
-        "name": "",
-        "topic": "",
-        "url": "uibuilder",
-        "fwdInMessages": false,
-        "allowScripts": false,
-        "allowStyles": false,
-        "copyIndex": true,
-        "showfolder": false,
-        "x": 420,
-        "y": 200,
-        "wires": [
-            [],
-            []
         ]
     },
     {
@@ -4153,6 +4134,54 @@
         "wires": [
             [
                 "fbddbc4a.ac268"
+            ]
+        ]
+    },
+    {
+        "id": "b327136a.9b554",
+        "type": "websocket out",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "server": "5bd79fa5.d89eb",
+        "client": "",
+        "x": 710,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f48b9dea.d01df",
+        "type": "docker-container-actions",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "config": "579edabe.09fe34",
+        "container": "osjs_osjs_1",
+        "action": "stats",
+        "options": "",
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "b327136a.9b554"
+            ]
+        ]
+    },
+    {
+        "id": "124d85e6.7c8b3a",
+        "type": "inject",
+        "z": "a3235da7.9d754",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "f48b9dea.d01df"
             ]
         ]
     }
